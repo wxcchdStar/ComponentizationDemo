@@ -12,5 +12,6 @@ public class Feature1DemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         startActivity(new Intent(this, Feature1Activity.class));
+        finish();
     }
 }

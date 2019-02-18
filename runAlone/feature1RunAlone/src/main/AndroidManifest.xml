@@ -3,7 +3,7 @@
     package="wxc.android.componentization.feature1runalone">
 
     <application
-        android:name="wxc.android.componentization.feature1.Feature1Application"
+        android:name=".Feature1DemoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

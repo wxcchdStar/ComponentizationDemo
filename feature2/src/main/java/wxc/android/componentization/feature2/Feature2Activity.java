@@ -10,11 +10,14 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import java.util.Locale;
 
 import wxc.android.componentization.base.BaseActivity;
+import wxc.android.componentization.router.IFeature1Service;
 
 // 坑：不同的Module之间一级path不能相同
 @Route(path = "/feature2/home")
 public class Feature2Activity extends BaseActivity {
     private static int sCount = 1;
+
+    IFeature1Service mFeature1Service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +39,8 @@ public class Feature2Activity extends BaseActivity {
                         .navigation();
             }
         });
+
+        mFeature1Service = ARouter.getInstance().navigation(IFeature1Service.class);
+        mFeature1Service.sayHello("Feature2");
     }
 }

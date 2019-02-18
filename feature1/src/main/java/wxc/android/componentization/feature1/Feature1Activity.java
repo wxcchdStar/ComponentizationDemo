@@ -30,6 +30,7 @@ public class Feature1Activity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 // TODO 通过接口等方式生成协议，不要手动传递参数
+                // 单独编译无法打开Feature2，也无法调用Feature2中的方法，需要我们自己Mock
                 ARouter.getInstance()
                         .build("/feature2/home")
                         .withInt("count", sCount++)

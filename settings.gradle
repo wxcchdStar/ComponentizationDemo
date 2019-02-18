@@ -1,1 +1,1 @@
-include ':app', ':base', ':feature1', ':runAlone:feature1RunAlone', ':feature2', ':runAlone:feature2RunAlone'
+include ':app', ':base', ':feature1', ':runAlone:feature1RunAlone', ':feature2', ':runAlone:feature2RunAlone', ':router'

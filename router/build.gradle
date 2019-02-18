@@ -24,12 +24,10 @@ android {
         }
     }
 
-    resourcePrefix 'feature2_'
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':base')
-    implementation project(':router')
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 }
