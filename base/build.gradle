@@ -9,6 +9,12 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -23,4 +29,6 @@ android {
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     api 'androidx.appcompat:appcompat:1.1.0-alpha02'
+    api 'com.alibaba:arouter-api:1.4.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 }

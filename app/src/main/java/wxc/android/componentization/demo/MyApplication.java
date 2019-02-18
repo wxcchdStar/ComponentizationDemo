@@ -1,11 +1,10 @@
 package wxc.android.componentization.demo;
 
-import android.app.Application;
-
+import wxc.android.componentization.base.BaseApplication;
 import wxc.android.componentization.feature1.Feature1Application;
 import wxc.android.componentization.feature2.Feature2Application;
 
-public class MyApplication extends Application {
+public class MyApplication extends BaseApplication {
 
     @Override
     public void onCreate() {

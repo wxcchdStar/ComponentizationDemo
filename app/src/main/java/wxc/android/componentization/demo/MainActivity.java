@@ -1,11 +1,11 @@
 package wxc.android.componentization.demo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+
 import wxc.android.componentization.base.BaseActivity;
-import wxc.android.componentization.feature1.Feature1Activity;
 
 public class MainActivity extends BaseActivity {
 
@@ -16,9 +16,14 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.btn_feature1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Feature1Activity.class);
-                startActivity(intent);
+                gotoFeature1();
             }
         });
+    }
+
+    private void gotoFeature1() {
+        ARouter.getInstance()
+                .build("/feature1/home")
+                .navigation();
     }
 }

@@ -3,11 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Feature1Activity">
 
     <TextView
+        android:id="@+id/tv_content"
         android:layout_width="match_parent"
-        android:text="@string/feature1_app_name"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="@string/feature1_app_name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_goto_feature2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GoToFeature2" />
 
 </LinearLayout>
