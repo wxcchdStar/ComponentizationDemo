@@ -2,6 +2,10 @@ package wxc.android.componentization.router;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 
+/**
+ * 长期看此类会变成"巨无霸"。
+ * 也可以将一个Module拆成export module和implementation module，将router信息放到export module中。
+ */
 public class RouterConfig {
 
     public static final String PATH_FEATURE1_HOME = "/feature1/home";
