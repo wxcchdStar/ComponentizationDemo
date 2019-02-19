@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 
@@ -18,10 +19,13 @@ import wxc.android.componentization.router.RouterConfig;
 public class Feature2Activity extends BaseActivity {
     private static int sCount = 1;
 
+    @Autowired
     IFeature1Service mFeature1Service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ARouter.getInstance().inject(this);
+
         super.onCreate(savedInstanceState);
         setTitle(R.string.feature2_app_name);
         setContentView(R.layout.feature2_activity_feature2);
@@ -37,7 +41,7 @@ public class Feature2Activity extends BaseActivity {
             }
         });
 
-        mFeature1Service = ARouter.getInstance().navigation(IFeature1Service.class);
+//        mFeature1Service = ARouter.getInstance().navigation(IFeature1Service.class);
         mFeature1Service.sayHello("Feature2");
     }
 }
