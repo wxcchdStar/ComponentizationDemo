@@ -11,6 +11,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import java.util.Locale;
 
 import wxc.android.componentization.base.BaseActivity;
+import wxc.android.componentization.router.IAppService;
 import wxc.android.componentization.router.IFeature1Service;
 import wxc.android.componentization.router.RouterConfig;
 
@@ -21,6 +22,10 @@ public class Feature2Activity extends BaseActivity {
 
     @Autowired
     IFeature1Service mFeature1Service;
+
+    // Feature2可以调用App的方法，那么也就是说我们可以实现渐进式组件化
+    @Autowired
+    IAppService mAppService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,5 +48,6 @@ public class Feature2Activity extends BaseActivity {
 
 //        mFeature1Service = ARouter.getInstance().navigation(IFeature1Service.class);
         mFeature1Service.sayHello("Feature2");
+        mAppService.sayBye("Feature2");
     }
 }
