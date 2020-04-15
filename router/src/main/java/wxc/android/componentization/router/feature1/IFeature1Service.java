@@ -1,4 +1,4 @@
-package wxc.android.componentization.router;
+package wxc.android.componentization.router.feature1;
 
 import com.alibaba.android.arouter.facade.template.IProvider;
 

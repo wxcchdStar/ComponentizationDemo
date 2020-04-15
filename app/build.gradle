@@ -31,7 +31,5 @@ dependencies {
     // TODO 迁移到Maven上，供其他项目使用
     implementation project(':feature1')
     implementation project(':feature2')
-    implementation project(':router')
-    implementation project(':base')
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 }

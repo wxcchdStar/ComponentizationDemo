@@ -5,7 +5,8 @@ import android.util.Log;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 
-import wxc.android.componentization.router.IAppService;
+import wxc.android.componentization.router.app.IAppService;
+
 
 @Route(path = "/app/service")
 public class AppServiceImpl implements IAppService {
@@ -17,6 +18,6 @@ public class AppServiceImpl implements IAppService {
 
     @Override
     public void init(Context context) {
-
+        Log.d("AppServiceImpl", "Init");
     }
 }

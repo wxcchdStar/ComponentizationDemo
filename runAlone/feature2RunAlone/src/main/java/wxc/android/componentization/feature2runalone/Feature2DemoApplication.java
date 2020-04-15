@@ -1,8 +1,8 @@
-package wxc.android.componentization.demo;
+package wxc.android.componentization.feature2runalone;
 
 import wxc.android.componentization.base.BaseApplication;
 
-public class MyApplication extends BaseApplication {
+public class Feature2DemoApplication extends BaseApplication {
 
     @Override
     public void onCreate() {

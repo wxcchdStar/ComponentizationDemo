@@ -11,9 +11,9 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import java.util.Locale;
 
 import wxc.android.componentization.base.BaseActivity;
-import wxc.android.componentization.router.IAppService;
-import wxc.android.componentization.router.IFeature1Service;
 import wxc.android.componentization.router.RouterConfig;
+import wxc.android.componentization.router.app.IAppService;
+import wxc.android.componentization.router.feature1.IFeature1Service;
 
 // 坑：不同的Module之间一级path不能相同
 @Route(path = RouterConfig.PATH_FEATURE2_HOME)
@@ -48,6 +48,6 @@ public class Feature2Activity extends BaseActivity {
 
 //        mFeature1Service = ARouter.getInstance().navigation(IFeature1Service.class);
         mFeature1Service.sayHello("Feature2");
-        mAppService.sayBye("Feature2");
+//        mAppService.sayBye("Feature2");
     }
 }
